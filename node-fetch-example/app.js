@@ -3,7 +3,9 @@ const fetch = require("node-fetch");
 
 const url = "https://ichef.bbci.co.uk/news/976/cpsprodpb/41CF/production/_109474861_angrycat-index-getty3-3.jpg"
 
-async function downloadImgByURL() {
+downloadImgByURL(url);
+
+async function downloadImgByURL(url) {
     const response = await fetch(url)
     const buffer = await response.buffer();
     try {
